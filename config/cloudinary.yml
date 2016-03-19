@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: ddzzm6vmm
+  api_key: '159713984825872'
+  api_secret: sUpAaTECjE-i3oOquUznQu5MKa0
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: ddzzm6vmm
+  api_key: '159713984825872'
+  api_secret: sUpAaTECjE-i3oOquUznQu5MKa0
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: ddzzm6vmm
+  api_key: '159713984825872'
+  api_secret: sUpAaTECjE-i3oOquUznQu5MKa0
+  enhance_image_tag: true
+  static_image_support: false
