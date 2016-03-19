@@ -21,9 +21,9 @@
       <!-- #bonus for a button that makes the user an admin   -->
       <td><%= link_to 'Make admin', 'make_admin/' + user.id.to_s, class: 'btn btn-info' %></td>
       <!-- delete user -->
-      <td>
+
         <% if user == current_user %>
-          <%= link_to 'Edit', edit_user_registration(user) %></td>
+        <td><%= link_to 'Edit', edit_user_registration_path(user) %></td>
         <% else %>
       <td><%= link_to 'Delete user', user_path(user), method: :delete, data: {confirm: 'Are you sure?'} %></td>
       <% end %>

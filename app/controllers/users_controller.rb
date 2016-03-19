@@ -4,6 +4,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.add_role :admin
     redirect_to :back
+  end
+  
 
 def destroy
   @user = User.find(params[:id])
