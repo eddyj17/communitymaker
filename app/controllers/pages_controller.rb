@@ -4,7 +4,8 @@ class PagesController < ApplicationController
 
   def admin
     if current_user.has_role? :admin
-      @users = User.all 
+      @users = User.all
+      @group_categories = GroupCategory.all
     else
       redirect_to root_path
   end

@@ -13,11 +13,11 @@
 
   <% @users.each do |user| %>
     <tr>
-      # <! -- make this a link to the user's profile page -->
+       <! -- make this a link to the user's profile page -->
       <td><%= link_to user.profile.full_name, profile_path(user.profile) %></td>
       <td><%= user.email %></td>
       <td><%= user.profile.phone %></td>
-      #if an admin, can add or delete.
+
       <!-- #bonus for a button that makes the user an admin   -->
       <td><%= link_to 'Make admin', 'make_admin/' + user.id.to_s, class: 'btn btn-info' %></td>
       <!-- delete user -->
@@ -31,3 +31,5 @@
 
       <% end %>
 </table>
+<hr>
+<%= render 'group_categories/index' %>
