@@ -23,10 +23,10 @@
       <!-- delete user -->
       <td>
         <% if user == current_user %>
-          <%= link_to 'Edit', edit_user_registration(registration_path)
-        else
+          <%= link_to 'Edit', edit_user_registration(registration_path) %>
+        <% else %>
       <td><%= link_to 'Delete user', user_path(user), method: :delete, data: {confirm: 'Are you sure?'} %></td>
-
+      <% end %>
       </tr>
 
       <% end %>
