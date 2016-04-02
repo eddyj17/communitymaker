@@ -14,6 +14,7 @@ end
 
 
   def contact
+    @enquiry = Enquiry.new
   end
 
   def about
