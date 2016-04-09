@@ -55,5 +55,26 @@
   <%= @event.country %>
 </p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<p><strong>Tags</strong></p>
+<% @event.tags.each do |tag| %>
+  <%= link_to tag, events_path(tag: tag.name) %>
+<% end %>
+
+<h3>Groups</h3>
+<% @event.groups.each do |group| %>
+  <%= link_to group.name, group, class: "btn btn-warning" %>
+<% end %>
+
+<p>Lat: <%= @event.latitude %></p>
+<p>Long: <%= @event.longitude %></p>
+
+<img src="https://maps.googleapis.com/maps/api/staticmap?
+zoom=14
+&size=600x300
+&maptype=roadmap
+&markers=color:green%7Clabel:G%7C<%= @event.latitude %>,<%= @event.longitude %>
+&key=", alt="">
+
+
+<p><%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %></p>

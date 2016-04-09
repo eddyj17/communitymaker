@@ -1,3 +1,8 @@
+<%= content_for :group_name, @group.name %>
+<%= content_for :group_banner, @group.banner %>
+
+
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -17,18 +22,20 @@
 
 <p>
   <strong>Logo:</strong>
-  <%= @group.logo %>
+  <%= cl_image_tag @group.logo, width: '50px' %>
 </p>
 
 <p>
   <strong>Banner:</strong>
-  <%= @group.banner %>
+  <%= cl_image_tag @group.banner, width: '50px' %>
 </p>
 
 <p>
   <strong>Owner:</strong>
   <%= @owner_profile.full_name %>
 </p>
+
+<%= link_to 'Create event', new_event_path,class: 'btn btn-warning' %>
 
 <%= link_to 'Edit', edit_group_path(@group) %> |
 <%= link_to 'Back', groups_path %>

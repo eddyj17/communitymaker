@@ -7,10 +7,15 @@ gem 'devise'
 gem 'simple_form'
 gem 'country_select'
 gem 'bootstrap'
+gem 'friendly_id'
 gem 'carrierwave'
 gem 'cloudinary'
 gem 'rolify'
 gem 'cancancan'
+gem 'geocoder'
+gem 'acts-as-taggable-on'
+
+
 
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'

@@ -7,4 +7,11 @@ class Group < ActiveRecord::Base
   has_many :memberships
   has_many :users, through: :memberships
 
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+
+  mount_uploader :logo, ProfilePicUploader
+  mount_uploader :banner, ProfilePicUploader
+
+
 end
